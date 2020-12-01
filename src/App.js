@@ -1,24 +1,50 @@
-import logo from './logo.svg';
+import { Route, Switch } from 'react-router-dom';
+import styled, { createGlobalStyle, css } from 'styled-components';
 import './App.css';
+
+import {
+  MainContainer,
+  LoginContainer,
+  SignupContainer,
+  HeaderContainer,
+} from './containers';
+
+// const GlobalStyle = createGlobalStyle`
+//   body {
+//     margin: 0;
+//     padding: 0;
+//     height: 100vh;
+//   }
+// `;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+`;
+
+const Body = styled.div`
+  flex: 1;
+  overflow: auto;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <GlobalStyle /> */}
+      <Container className='Container'>
+        <HeaderContainer />
+        <Body style={{ border: '1px solid black' }}>
+          (body)
+          <Switch>
+            <Route path='/' exact component={MainContainer} />
+            <Route path='/login' component={LoginContainer} />
+            <Route path='/signup' component={SignupContainer} />
+          </Switch>
+        </Body>
+      </Container>
+    </>
   );
 }
 
