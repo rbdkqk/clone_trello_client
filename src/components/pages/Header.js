@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Button } from '../UI/atoms';
 
 const Container = styled.div`
   flex: 0 1 80px;
@@ -36,32 +37,52 @@ export default function Header() {
           <img
             src='/img/trello-logo-blue.png'
             alt='trello img'
-            width='200px'
+            width='180px'
           ></img>
         </Link>
       </MainLogo>
 
       <LoginButton>
         <Link to='./login'>
-          <button style={{ width: '100px', fontSize: '1.5em' }}>login</button>
+          <Button
+            text='login'
+            width='100px'
+            fontSize='1.5em'
+            backgroundColor='white'
+          ></Button>
         </Link>
       </LoginButton>
 
       <SignupButton>
         <Link to='./signup'>
-          <button style={{ width: '100px', fontSize: '1.5em' }}>signup</button>
+          <Button
+            text='signup'
+            width='100px'
+            fontSize='1.5em'
+            backgroundColor='white'
+          ></Button>
         </Link>
       </SignupButton>
 
       <MypageButton>
         <Link to='./mypage'>
-          <button style={{ width: '100px', fontSize: '1.5em' }}>mypage</button>
+          <Button
+            text='mypage'
+            width='100px'
+            fontSize='1.5em'
+            backgroundColor='white'
+          ></Button>
         </Link>
       </MypageButton>
 
       <LogoutButton>
         <Link to='./mypage'>
-          <button style={{ width: '100px', fontSize: '1.5em' }}>logout</button>
+          <Button
+            text='logout'
+            width='100px'
+            fontSize='1.5em'
+            backgroundColor='white'
+          ></Button>
         </Link>
       </LogoutButton>
     </Container>
