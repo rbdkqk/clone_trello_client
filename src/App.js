@@ -28,6 +28,7 @@ const Container = styled.div`
 const Body = styled.div`
   flex: 1;
   overflow: auto;
+  display: flex;
 `;
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
       <Container className='Container'>
         <HeaderContainer />
         <Body style={{ border: '1px solid black' }}>
-          (body)
+          {/* (body) */}
           <Switch>
             <Route path='/' exact component={MainContainer} />
             <Route path='/login' component={LoginContainer} />
