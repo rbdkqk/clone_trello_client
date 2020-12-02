@@ -2,18 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import { Input } from '../atoms';
 
-export default function InputSet({ text, type }) {
+export default function InputSet() {
   return (
     <Container>
-      <Input type={type} />
+      <Input text='nickname' type='text' />
+      <Input text='password' type='password' />
+      {window.location.pathname === '/signup' ? (
+        <Input text='password confirm' type='password' />
+      ) : (
+        ''
+      )}
     </Container>
   );
 }
 
 const Container = styled.div`
-  flex: 1;
+  /* align-items: center; */
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 5px 0px;
+  flex-direction: column;
+  margin: 20px;
 `;

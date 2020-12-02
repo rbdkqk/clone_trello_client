@@ -2,17 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { Button } from '../atoms';
 
-export default function SocialLoginButtonSet() {
+export default function SocialLoginButtonSet({ googleText, naverText }) {
   return (
     <Container>
       <Button
-        text='Google Login'
+        text={googleText}
         width='300px'
         fontSize='1.5em'
         backgroundColor='white'
       />
       <Button
-        text='Naver Login'
+        text={naverText}
         width='300px'
         fontSize='1.5em'
         backgroundColor='white'
