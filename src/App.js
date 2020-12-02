@@ -7,6 +7,7 @@ import {
   LoginContainer,
   SignupContainer,
   HeaderContainer,
+  MypageContainer,
 } from './containers';
 
 // const GlobalStyle = createGlobalStyle`
@@ -21,7 +22,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
 `;
 
 const Body = styled.div`
@@ -41,6 +42,7 @@ function App() {
             <Route path='/' exact component={MainContainer} />
             <Route path='/login' component={LoginContainer} />
             <Route path='/signup' component={SignupContainer} />
+            <Route path='/mypage' component={MypageContainer} />
           </Switch>
         </Body>
       </Container>
